@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ .Values.pod4_name }}
 spec:
+  type: {{ .Values.pod4_type }}
   selector:
     app: {{ .Values.pod4_app }}
   ports:

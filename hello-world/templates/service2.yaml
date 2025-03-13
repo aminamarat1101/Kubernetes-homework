@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.pod5_name }}
 spec:
   selector:
+    type: {{ .Values.pod4_type }}
     app: {{ .Values.pod5_name }}
   ports:
     - protocol: {{ .Values.pod4_protocol }}
