@@ -1,0 +1,31 @@
+pod1_name: nginx-deployment
+pod2_name: nginx-deployment2
+pod3_name: minimal-ingress
+pod4_name: my-service
+pod5_name: my-service2
+
+pod1_image: 
+  repository: gcr.io/google-samples/hello-app
+  tag: "1.0"
+
+pod1_port: 8080
+
+pod2_image:
+  repository: gcr.io/google-samples/hello-app
+  tag: "2.0" 
+
+pod3_service1:
+    name: my-service
+pod3_service2:
+    name: my-service2
+
+pod3_port: 80
+
+pod4_app: nginx
+pod4_protocol: TCP
+pod4_port: 80
+pod4_targetPort: 8080
+pod4_nodePort: 3007
+
+pod5_app: nginx2
+pod5_nodePort: 3008

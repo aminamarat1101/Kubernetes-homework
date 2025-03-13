@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: {{ .Values.pod4_name }}
 spec:
   selector:
-    app: nginx
+    app: {{ .Values.pod4_app }}
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
+    - protocol: {{ .Values.pod4_protocol }}
+      port: {{ .Values.pod4_port }}
+      targetPort: {{ .Values.pod4_targetPort }}
+      nodePort: {{ .Values.pod4_nodePort }}

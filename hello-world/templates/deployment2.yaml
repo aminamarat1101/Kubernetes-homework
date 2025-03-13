@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment2
+  name: {{ .Values.pod2_name }}
   labels:
     app: nginx2
 spec:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/google-samples/hello-app:2.0
+        image: {{ .Values.pod2_image.repository }}:{{ .Values.pod2_image.tag }}
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.pod2_image.repository }}:{{ .Values.pod2_image.tag }}

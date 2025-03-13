@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: {{ .Values.pod3_name }}
 spec:
   rules:
   - http:
@@ -10,13 +10,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-service
+            name: {{ .Values.pod3_service1.name }}
             port:
-              number: 80
+              number: {{ .Values.pod3_port }}
       - path: /hello
         pathType: Prefix
         backend:
           service:
-            name: my-service2
+            name: {{ .Values.pod3_service2.name }}
             port:
-              number: 80              
+              number: {{ .Values.pod3_port }}           

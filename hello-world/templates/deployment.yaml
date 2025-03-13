@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: {{ .Values.pod1_name }}
   labels:
     app: nginx
 spec:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/google-samples/hello-app:1.0
+        image: {{ .Values.pod1_image.repository }}:{{ .Values.pod1_image.tag }}
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.pod1_port }}
