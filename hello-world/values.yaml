@@ -29,4 +29,5 @@ pod4_targetPort: 8080
 pod4_nodePort: 30007
 
 pod5_app: nginx2
-pod5_nodePort: 30008
+pod5_type: ClusterIP
+

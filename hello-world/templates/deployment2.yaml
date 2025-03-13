@@ -18,4 +18,4 @@ spec:
       - name: nginx
         image: {{ .Values.pod2_image.repository }}:{{ .Values.pod2_image.tag }}
         ports:
-        - containerPort: {{ .Values.pod2_image.repository }}:{{ .Values.pod2_image.tag }}
+        - containerPort: {{ .Values.pod1_port }}

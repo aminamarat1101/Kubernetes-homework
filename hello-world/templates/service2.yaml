@@ -4,10 +4,11 @@ metadata:
   name: {{ .Values.pod5_name }}
 spec:
   selector:
-    type: {{ .Values.pod4_type }}
+    type: {{ .Values.pod5_type }}
     app: {{ .Values.pod5_name }}
   ports:
     - protocol: {{ .Values.pod4_protocol }}
       port: {{ .Values.pod4_port }}
       targetPort: {{ .Values.pod4_targetPort }}
-      nodePort: {{ .Values.pod5_nodePort }}
+      
+      

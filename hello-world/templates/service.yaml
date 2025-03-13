@@ -11,3 +11,5 @@ spec:
       port: {{ .Values.pod4_port }}
       targetPort: {{ .Values.pod4_targetPort }}
       nodePort: {{ .Values.pod4_nodePort }}
+      
+      
