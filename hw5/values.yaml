@@ -1,0 +1,17 @@
+deployment_name: nginx-deployment
+deployment_volumes_name: task-pv-storage
+deployment_containers_name: nginx
+
+deployment_image:
+  repository: nginx
+  tag: "1.14.2"
+
+deployment_containerPort: 80
+deployment_replicas: 1
+deployment_claimName: task-pv-claim
+deployment_mountPath: "/usr/share/nginx/html" 
+
+pvc_name: task-pv-claim
+pvc_accessModes: ReadWriteOnce
+pvc_capacity: 10Gi
+pvc_storageClassName: standard-rwo
